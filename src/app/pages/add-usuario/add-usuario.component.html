@@ -10,23 +10,23 @@
     </div>
     <div class="form-group">
             <label for=""></label>
-            <input type="text" class="form-control"[(ngModel)]="usuario.email"  placeholder="E-mail" name="email" required>
+            <input type="text" class="form-control" [(ngModel)]="usuario.email"  placeholder="E-mail" name="email" required>
             
             <small class="form-text text-muted"></small>
 
         </div>
         <div class="form-group">
                 <label for=""></label>
-                <input type="text" class="form-control"[(ngModel)]="usuario.pws" placeholder="Senha" name="pws" required minlength="6" #pws="ngModel">
+                <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="Senha" name="pws" required minlength="6" #pws="ngModel">
                 
-                <small class="form-text text-muted" *ngIf="pws.invalid">Senha muito curta</small>
+                <small class="form-text text-muted" *ngIf="pws.invalid && pws.dirty">Senha muito curta</small>
             </div>
 
             <div class="form-group text-right">
                 <label for=""></label>
-                <input type="text" class="form-control" (ngModel)="conf" placeholder=" Confirma Senha" name="conf" required #conf="ngModel">
+                <input type="password" class="form-control" (ngModel)="conf" placeholder=" Confirma Senha" name="conf" required #conf="ngModel">
                 
-                <small class="form-text text-danger" *ngIf="pws.value !=conf.value"> Senha diferente</small>
+                <small class="form-text text-danger" *ngIf="(pws.value !=conf.value) && conf.dirty"> Senha diferente</small>
             </div>
 
             <div class="form-group text-right">
@@ -38,6 +38,7 @@
                 </div>
                 </form>
             </section>
+            <app-list-usuario></app-list-usuario>
 
 
   

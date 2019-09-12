@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 0
+    },
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "ativo": true,
+      "nome": "Fernanda",
+      "email": "fernandatavaresjesus@gmail.com",
+      "pws": "nanda123",
+      "id": 5
+    },
+    {
+      "ativo": true,
+      "nome": "Fernanda",
+      "email": "fernandatavaresjesus@gmail.com",
+      "pws": "nanda123",
+      "id": 6
+    },
+    {
+      "ativo": true,
+      "nome": "Fernanda",
+      "email": "fernandatavaresjesus@gmail.com",
+      "pws": "nanda123",
+      "id": 7
+    }
+  ]
+}

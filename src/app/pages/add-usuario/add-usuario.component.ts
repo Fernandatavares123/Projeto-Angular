@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../model/usuario';
+import { UsuarioService } from '../../services/usuario.service';
+import { Alert } from 'selenium-webdriver';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-usuario',
@@ -9,12 +12,31 @@ import { Usuario } from '../../model/usuario';
 export class AddUsuarioComponent implements OnInit {
   protected usuario:Usuario = new Usuario;
 
-  constructor() { }
+  constructor(
+    protected usuarioServece:UsuarioService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
-  onsubmit(from){
+  onsubmit(form){
     console.log(this.usuario);
+    this.usuarioServece.save(this.usuario).subscribe(
+      res=>{
+        console.log("Castrodo!" , res);
+        alert("Castrodo!");
+        form.reset()
+        this.router.navigate(['addUsuario']);
+        
+      },
+          err=>{
+            console.log("Não cadastrado!" ,err);
+            alert("Não cadastrado!");
+            }
+          )
+        
+      
+
   }
 
 }
