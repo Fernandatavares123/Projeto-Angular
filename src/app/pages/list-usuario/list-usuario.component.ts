@@ -12,7 +12,7 @@ export class ListUsuarioComponent implements OnInit {
   
 
   usuario: Observable<Object>;
-  protected any;
+  protected usuarios: any;
 
   constructor(
 
@@ -21,7 +21,7 @@ export class ListUsuarioComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.usuario=this.usuarioService.getAll();
+    this.usuarios=this.usuarioService.getAll();
   }
 
 }

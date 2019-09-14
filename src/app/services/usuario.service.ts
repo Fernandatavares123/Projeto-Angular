@@ -19,7 +19,7 @@ save(usuario:Usuario){
 
 }
 getAll(){
-   return this.http.get(this.db + "usuario")
+   return this.http.get(this.db + "usuarios")
 }
 
 }
