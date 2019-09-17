@@ -22,4 +22,7 @@ getAll(){
    return this.http.get(this.db + "usuarios")
 }
 
+getEndereco(cep){
+  return this.http.get("https://viacep.com.br/ws/" + cep + "/json/")
+}
 }

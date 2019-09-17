@@ -17,7 +17,7 @@ export class EventoService {
     ){}
 
     save(evento:Evento){
-        return this.http.post(this.db + "evento", evento)
+        return this.http.post(this.db + "eventos", evento)
     }
     getAll(){
         return this.http.get(this.db + "eventos")

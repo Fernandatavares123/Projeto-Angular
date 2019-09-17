@@ -16,6 +16,13 @@
 
         </div>
         <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" [(ngModel)]="cep"  placeholder="Cep" name="cep" required (keyup) ="buscaCep()">
+            
+            <small class="form-text text-muted"></small>
+
+        </div>
+        <div class="form-group">
                 <label for=""></label>
                 <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="Senha" name="pws" required minlength="6" #pws="ngModel">
                 

@@ -1,42 +1,39 @@
+<section class="container">
+    
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" [(ngModel)]="evento.nome" placeholder="evento.name" name="evento.nome" required>
 
-    <section class="container">
-        <form #fc=ngForm (ngSubmit)="onsubmit(fc)">
-        
-            <div class="form-group">
-                <label for=""></label>
-                <input type="text" class="form-control" [(ngModel)]="evento.nome" placeholder="name" name="nome"  required>
-                
-                <small class="form-text text-muted"></small>
-            </div>
-            <div class="form-group">
-                    <label for=""></label>
-                    <input type="text" class="form-control" [(ngModel)]="Tema"  placeholder="tema" name="tema" required>
-                    
-                    <small class="form-text text-muted"></small>
-        
-                </div>
-                <div class="form-group">
-                        <label for=""></label>
-                        <input type="data" class="form-control" [(ngModel)]="Data" placeholder="data" name="data" required minlength="6" #pws="ngModel">
-                        
-                        <small class="form-text text-muted"/small>
-                    </div>
-                    <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" [(ngModel)]="Horario"  placeholder="horario" name="horario" required>
-                        
-                        <small class="form-text text-muted"></small>
-            
-                    </div>
-                    
-                    
-                   
-                            
-                            <button type="submit" class="btn btn-primary ml-2" [disabled]="fc.invalid ">Ativo</button>
-                            <button type="reset" class="btn btn-primary ml-2"></button>   
-                            
-                       
-                        </div>
-                        </form>
-                    </section>
-                    <app-list-usuario></app-list-usuario>
+            <small class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" [(ngModel)]="Tema" placeholder="tema" name="tema" required>
+
+            <small class="form-text text-muted"></small>
+
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="data" class="form-control" [(ngModel)]="Data" placeholder="data" name="data" required minlength="6">
+
+            <small class="form-text text-muted" /small>
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" [(ngModel)]="Horario" placeholder="horario" name="horario" required>
+
+            <small class="form-text text-muted"></small>
+
+        </div>
+
+
+
+        <div>
+            <button type="submit" class="btn btn-primary ml-2" [disabled]="fc.invalid ">Ativo</button>
+            <button type="reset" class="btn btn-primary ml-2"></button>
+
+
+        </div>
+    
+</section>

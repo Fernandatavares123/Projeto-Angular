@@ -27,8 +27,8 @@ export class EventoComponent implements OnInit {
     console.log(this.evento);
     this.eventoServece.save(this.evento).subscribe(
       res=>{
-        console.log("Castrodo!" , res);
-        alert("Castrodo!");
+        console.log("Ativo!" , res);
+        alert("Ativo!");
         form.reset()
         this.router.navigate(['addEvento']);
         
@@ -37,7 +37,7 @@ export class EventoComponent implements OnInit {
         console.log("Não cadastrado!" ,err);
         alert("Não cadastrado!");
         }
-      )
+     )
     
   
 
