@@ -13,6 +13,7 @@ import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.componen
 
 
 import { EventoComponent } from './pages/evento/evento.component';
+import { EnderecoComponent } from './pages/endereco/endereco.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { EventoComponent } from './pages/evento/evento.component';
     ListUsuarioComponent,
    
    
-    EventoComponent
+    EventoComponent,
+   
+   
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,
