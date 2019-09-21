@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../services/usuario.service';
-import { Observable } from 'rxjs';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-list-usuario',
@@ -8,20 +7,26 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-usuario.component.css']
 })
 export class ListUsuarioComponent implements OnInit {
-  
-  
 
-  usuario: Observable<Object>;
-  protected usuarios: any;
+ protected usuarios:any;
 
   constructor(
-
     protected usuarioService:UsuarioService
-
   ) { }
 
   ngOnInit() {
-    this.usuarios=this.usuarioService.getAll();
+    this.usuarios = this.usuarioService.getAll();
   }
 
+  apagr(usuario){
+    if(confirm("Apagar os dados do usuario:\n" + usuario.nome +"?")){
+      this.usuarioService.delete(usuario.id).subscribe(
+     res=>{
+       alert("Usuario apagado!");
+     }   
+      )
+    }
+  }
 }
+
+

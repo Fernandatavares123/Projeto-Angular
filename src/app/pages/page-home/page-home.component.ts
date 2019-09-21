@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { EventoService } from 'src/app/services/evento.service';
 
 @Component({
-  selector: 'app-list-evento',
-  templateUrl: './list-evento.component.html',
-  styleUrls: ['./list-evento.component.css']
+  selector: 'app-page-home',
+  templateUrl: './page-home.component.html',
+  styleUrls: ['./page-home.component.css']
 })
-export class ListEventoComponent implements OnInit {
+export class PageHomeComponent implements OnInit {
+
   protected eventos:any;
 
   constructor(
@@ -16,6 +17,4 @@ export class ListEventoComponent implements OnInit {
   ngOnInit() {
     this.eventos = this.eventoService.getAll();
   }
- 
- 
- }
+}

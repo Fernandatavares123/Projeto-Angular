@@ -1,40 +1,37 @@
 {
   "usuarios": [
     {
-      "id": 0
-    },
+      "ativo": true,
+      "endereco": {
+        "cep": "23520-120",
+        "logradouro": "Rua Antenor",
+        "localidade": "Rio de Janeiro",
+        "bairro": "Santa Cruz",
+        "uf": "RJ",
+        "numero": "11"
+      },
+      "nome": "Mario da Silva",
+      "email": "mario@email.com",
+      "pws": "111111",
+      "id": 1
+    }
+  ],
+  "eventos": [
     {
+      "ativo": true,
+      "nome": "Festa da Tia",
+      "tema": "Festa de Rua",
+      "data": "2019-10-08",
+      "hora": "21:00",
       "id": 1
     },
     {
+      "ativo": true,
+      "nome": "Escola Feliz",
+      "tema": "Escolar",
+      "data": "2019-10-12",
+      "hora": "10:00",
       "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "ativo": true,
-      "nome": "Fernanda",
-      "email": "fernandatavaresjesus@gmail.com",
-      "pws": "nanda123",
-      "id": 5
-    },
-    {
-      "ativo": true,
-      "nome": "Fernanda",
-      "email": "fernandatavaresjesus@gmail.com",
-      "pws": "nanda123",
-      "id": 6
-    },
-    {
-      "ativo": true,
-      "nome": "Fernanda",
-      "email": "fernandatavaresjesus@gmail.com",
-      "pws": "nanda123",
-      "id": 7
     }
   ]
 }

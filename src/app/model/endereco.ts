@@ -1,16 +1,14 @@
 export class Endereco {
-    
     cep: string;
-    logradouro:string;
-    complemento:string;
-    bairro:string;
-    localidade:string;
-    uf:string;
+    logradouro: string;
+    complemento: string;
+    bairro: string;
+    localidade: string;
+    uf: string;
+    //unidade: string;
+    //ibge: string;
+    //gia: string;
     numero:string;
-    //unidade:string;
-    //ibge:string;
-    //gia:string;
 
-    erro:boolean =false;
-      
+    erro:boolean;
 }
