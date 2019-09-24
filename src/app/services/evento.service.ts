@@ -7,18 +7,31 @@ import { Evento } from '../model/evento';
   providedIn: 'root'
 })
 export class EventoService {
-  
-  private db = environment.serveAPI;
 
+  private db = environment.serveAPI
+  
   constructor(
-    protected http:HttpClient
+    protected http: HttpClient
   ) { }
 
-  save(evento:Evento){
+  save(evento: Evento) {
     return this.http.post(this.db + "eventos", evento)
   }
 
-  getAll(){
+  getAll() {
     return this.http.get(this.db + "eventos")
   }
+
+  update(usuario, id) {
+    return this.http.put(this.db + "eventos/" + id, Evento)
+  }
+
+  delete(id) {
+    return this.http.delete(this.db + "eventos/" + id)
+  }
+
+  get(id) {
+    return this.http.get<Evento>(this.db + "eventos/" + id)
+  }
+
 }
